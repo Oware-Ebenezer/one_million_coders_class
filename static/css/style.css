@@ -1,0 +1,32 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 45px; /* Margin bottom by footer height */
+  font-family: "Google Sans", sans-serif;
+}
+
+nav.navbar {
+    background-color: #071534;
+}
+
+a.navbar-brand {
+    font-size:2rem ;
+    font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px; /* Set the fixed height of the footer here */
+  background-color: #071534;
+  
+}
+
+#dateYear {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 12px;
+}
