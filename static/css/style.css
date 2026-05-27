@@ -5,6 +5,33 @@ html {
 body {
   margin-bottom: 45px; /* Margin bottom by footer height */
   font-family: "Google Sans", sans-serif;
+   background-color: #e0f8f1;
+}
+
+body::after {
+  content: "";
+  height: 200px;
+  width: 200px;
+  background-color: #071534;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: -100px;
+  z-index: -1000;
+  opacity: 0.1;
+}
+
+body::before {
+  content: "";
+  height: 200px;
+  width: 200px;
+  background-color: #f31f9b;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  z-index: -1000;
+  opacity: 0.3;
 }
 
 nav.navbar {
@@ -29,4 +56,46 @@ a.navbar-brand {
   color: #fff;
   font-size: 18px;
   margin-top: 12px;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.container-fluid > .row {
+  padding: 60px 50px 0 50px;
+}
+
+img {
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.header-text {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #071534;
+}
+.header-text ~ .row {
+  padding-top: 3rem;
+  background-color: #f0f0f073;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  backdrop-filter: blur(5px);
+}
+.header-paragraph {
+  font-size: 1.5rem;
+  color: #071534;
+  margin-bottom: 30px;
+}
+
+input[type="text"], textarea.form-control {
+  font-size: 1.2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="{{url_for('static', filename='css/style.css')}}"
     />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,26 +42,28 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+            <li {% block home_active%} {% endblock %}>
+              <a href="{{url_for('index')}}">Home</a>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li ><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+            <li {%block dashboard_active%} {%endblock%}>
+              <a href="{{url_for('dashboard')}}">Dashboard</a>
+            </li>
           </ul>
         </div>
         <!--/.nav-collapse -->
       </div>
     </nav>
-    {% block content %}{% endblock %}
+    <div class="container-fluid">{% block content %}{% endblock %}</div>
 
-   
+    <footer class="footer">
+      <div class="container text-center">
+        <p id="dateYear"></p>
+      </div>
+    </footer>
 
-     <footer class="footer">
-    <div class="container text-center ">
-      <p id="dateYear"></p>
-    </div>
-  </footer>
-
-   <script
+    <script
       defer
       src="{{url_for('static',filename='js/bootstrap.js')}}"
     ></script>
@@ -70,6 +72,4 @@
       src="{{url_for('static',filename='js/datetime.js')}}"
     ></script>
   </body>
-
- 
 </html>
