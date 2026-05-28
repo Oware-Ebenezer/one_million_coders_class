@@ -12,14 +12,16 @@ content %}
 
     <div class="row">
       <div class="col-sm-6">
-        <form action="#">
+        <form action="#" method="POST">
           <div class="form-group">
             <label for="word">Word</label>
             <input
               type="text"
               class="form-control"
               id="word"
+              name="word"
               placeholder="Enter a word"
+              required
             />
           </div>
           <button
@@ -32,14 +34,14 @@ content %}
         </form>
       </div>
       <div class="col-sm-6">
-        <form action="#">
+        <form action="#" method="POST">
           <div class="form-group">
             <label for="definition">Meaning</label>
             <textarea
               class="form-control"
               id="definition"
               placeholder="The meaning of the word shows here"
-              disbaled
+              disabled
             ></textarea>
           </div>
         </form>
@@ -47,7 +49,11 @@ content %}
     </div>
   </div>
   <div class="col-md-6">
-    <img src="{{url_for('static', filename='images/encyclopedia.jpg')}}" alt="Dictionary Image" class="img-responsive" />
+    <img
+      src="{{url_for('static', filename='images/encyclopedia.jpg')}}"
+      alt="Dictionary Image"
+      class="img-responsive"
+    />
   </div>
 </div>
 {% endblock %}
